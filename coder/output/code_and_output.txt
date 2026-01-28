@@ -1,0 +1,17 @@
+```python
+def calculate_series(num_terms):
+    series_sum = 0
+    for i in range(num_terms):
+        # Term is (-1)^i / (2i + 1)
+        # Even i adds, odd i subtracts
+        term = ((-1) ** i) / (2 * i + 1)
+        series_sum += term
+    return series_sum * 4
+
+terms = 10000
+result = calculate_series(terms)
+print(f'Final Result: {result}')
+```
+
+Output:
+Final Result: 3.1414926535900345
